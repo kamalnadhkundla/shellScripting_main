@@ -12,6 +12,7 @@ COMMENT
 #readonly name
 #unset name
 
+: << 'COMMENT'
 echo $0
 echo "$1"
 echo $2
@@ -23,3 +24,9 @@ echo $@
 echo $$
 echo $!
 echo $?
+COMMENT
+
+for name in $*
+do 
+  echo $name
+done
