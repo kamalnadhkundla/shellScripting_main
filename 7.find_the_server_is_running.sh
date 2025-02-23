@@ -1,5 +1,5 @@
 #!/bin/bash
-SERVICE_NAME=$1
+SERVICE_NAME=$#
 service ${SERVICE_NAME} status >/dev/null
 if [ $# -eq 0 ]; then
     echo  "provide at least one argument"
