@@ -1,5 +1,5 @@
 #!bin/bash
-SERVICE_NAME =$1
+SERVICE_NAME=$1
 
 service ${SERVICE_NAME} status >/dev/null
 
