@@ -1,5 +1,5 @@
 #!/bin/bash
-SERVICE_NAME1=${"@"}
+SERVICE_NAME1=${@}
 for SERVICE_NAME in ${SERVICE_NAME1}
 do
 
