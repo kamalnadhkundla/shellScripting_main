@@ -3,7 +3,7 @@ SERVICE_NAME1=${@}
 for SERVICE_NAME in ${SERVICE_NAME1}
 do
 service ${SERVICE_NAME} status >/dev/null
-if [ $# -eq 0 ] && [ $# -gt 1]; then
+if [ $# -eq 0 ] || [ $# -gt 1]; then
     echo  "provide at least one argument or not more than 1 argument"
 else
     if [ $? -eq 0 ]; then
