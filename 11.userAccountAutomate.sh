@@ -2,7 +2,7 @@
 #,read -p "please enter username" username
 set -x
 
-if [ $# -gt 2 ]; then
+if [ $# -gt 0 ]; then
     USERNAME=$1
 
     EXISTING_USER=$(cat /etc/passwd | grep -i -w ${USERNAME} | cut -d ':' -f1)
@@ -13,5 +13,5 @@ if [ $# -gt 2 ]; then
         echo "lets create the user${USERNAME}"
     fi
 else
-    echo you have given mor than one arugument. okka argument evuu roo
+    echo you have given $# arugument. okka argument evuu roo
 fi
