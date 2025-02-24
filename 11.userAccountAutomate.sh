@@ -13,7 +13,7 @@ if [ $# -gt 0 ]; then
         echo "lets create the user${USERNAME}"
         useradd -m ${USERNAME} -s /bin/bash
         SPEC=$(echo '!@#$%^&*()_' | fold -1 | shuf | head -1);
-        PASSWORD="India@${RANDOM}${SPEC}
+        PASSWORD="India@${RANDOM}${SPEC}"
         echo "${USERNAME}:${PASSWORD}" | sudo chpasswd
         passwd -e ${USERNAME}
         echo " the username is ${USERNAME} and password is ${PASSWORD}."
