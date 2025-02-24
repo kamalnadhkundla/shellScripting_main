@@ -21,11 +21,7 @@ if [ $# -gt 0 ]; then
        #curl -X POST ${SLACK_WEB} -sL -H 'content-type: application/json' --data "{"text" : \"Temporary Password is: ${PASSWORD} Reset this password immediately.\"}" >>/dev/null
        curl -X POST "${SLACK_WEB}" \
      -H 'Content-Type: application/json' \
-     --data "{\"text\": \"USERNAME is: ${USERNAME}\"}"
-
-        curl -X POST "${SLACK_WEB}" \
-            -H 'Content-Type: application/json' \
-            --data "{\"text\": \"New user has been created! \\nTemporary Password: ${PASSWORD} \\nPlease reset this password immediately for security.\"}"
+     --data '{"text": "Hello, this is a test message from Linux CLI!"}'
     fi
 else
     echo you have given $# arugument. okka argument evuu roo
