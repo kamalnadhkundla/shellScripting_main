@@ -1,7 +1,7 @@
 #!/bin/bash
 #,read -p "please enter username" username
 set -x
-SLACK_WEB='https://hooks.slack.com/services/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'
+#SLACK_WEB='https://hooks.slack.com/services/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'
 if [ $# -gt 0 ]; then
     USERNAME=$1
 
@@ -19,7 +19,7 @@ if [ $# -gt 0 ]; then
        # echo " the username is ${USERNAME} and password is ${PASSWORD}."
        #curl -X POST ${SLACK_WEB} -sL -H 'content-type: application/json' --data "{"text" : \"Username is: ${USERNAME}\"}" >>/dev/null
        #curl -X POST ${SLACK_WEB} -sL -H 'content-type: application/json' --data "{"text" : \"Temporary Password is: ${PASSWORD} Reset this password immediately.\"}" >>/dev/null
-     curl -v -X POST "$SLACK_WEB" \
+     curl -v -X POST 'https://hooks.slack.com/services/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' \
      -H 'Content-Type: application/json' \
      --data "$(jq -n --arg user "$USERNAME" --arg pass "$PASSWORD" \
        '{text: "New user has been created!\nUsername: \($user)\nTemporary Password: \($pass)\nPlease reset this password immediately."}')"
