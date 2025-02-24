@@ -19,7 +19,7 @@ if [ $# -gt 0 ]; then
        # echo " the username is ${USERNAME} and password is ${PASSWORD}."
        #curl -X POST ${SLACK_WEB} -sL -H 'content-type: application/json' --data "{"text" : \"Username is: ${USERNAME}\"}" >>/dev/null
        #curl -X POST ${SLACK_WEB} -sL -H 'content-type: application/json' --data "{"text" : \"Temporary Password is: ${PASSWORD} Reset this password immediately.\"}" >>/dev/null
-       curl -X POST "${SLACK_WEB}" \ -H 'Content-Type: application/json' \ --data "{\"text\": \"USERNAME is: ${USERNAME}\"}"
+       curl -X POST ${SLACK_WEB} \ -H 'Content-Type: application/json' \ --data "{\"text\": \"USERNAME is: ${USERNAME}\"}"
        curl -X POST ${SLACK_WEB} \-H 'Content-Type: application/json' \--data "{\"text\": \"New user has been created! \\nTemporary Password: ${PASSWORD} \\nPlease reset this password immediately for security.\"}"
     fi
 else
