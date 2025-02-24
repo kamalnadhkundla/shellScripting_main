@@ -1,12 +1,17 @@
 #!/bin/bash
 #,read -p "please enter username" username
 set -x
-USERNAME=$1
 
-EXISTING_USER=$(cat /etc/passwd | grep -i -w ${USERNAME} | cut -d ':' -f1)
+if [ $# -gt 1 ]; then
+    USERNAME=$1
 
-if [ "${USERNAME}" = "${EXISTING_USER}" ]; then
-    echo "${EXISTING_USER} already exist try a differnet username"
+    EXISTING_USER=$(cat /etc/passwd | grep -i -w ${USERNAME} | cut -d ':' -f1)
+
+    if [ "${USERNAME}" = "${EXISTING_USER}" ]; then
+        echo "${EXISTING_USER} already exist try a differnet username"
+    else
+        echo "lets create the user${USERNAME}"
+    fi
 else
-    echo "lets create the user${USERNAME}"
+    echo you have given mor than one arugument. okka argument evuu roo
 fi
