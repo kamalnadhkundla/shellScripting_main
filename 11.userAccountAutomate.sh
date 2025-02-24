@@ -1,7 +1,7 @@
 #!/bin/bash
 #,read -p "please enter username" username
 #set -x
-SLACK_WEB='https://hooks.slack.com/services/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'
+SLACK_WEB="https://hooks.slack.com/services/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"
 if [ $# -gt 0 ]; then
     USERNAME=$1
 
@@ -19,9 +19,9 @@ if [ $# -gt 0 ]; then
        # echo " the username is ${USERNAME} and password is ${PASSWORD}."
        #curl -X POST ${SLACK_WEB} -sL -H 'content-type: application/json' --data "{"text" : \"Username is: ${USERNAME}\"}" >>/dev/null
        #curl -X POST ${SLACK_WEB} -sL -H 'content-type: application/json' --data "{"text" : \"Temporary Password is: ${PASSWORD} Reset this password immediately.\"}" >>/dev/null
-       curl -X POST "${SLACK_WEB}" \
+    curl -X POST "$SLACK_WEB" \
      -H 'Content-Type: application/json' \
-     --data '{"text": "Hello, this is a test message from Linux CLI!"}'
+     --data "{\"text\": \"New user has been created! \\nUsername: ${USERNAME} \\nTemporary Password: ${PASSWORD} \\nPlease reset this password immediately.\"}"
     fi
 else
     echo you have given $# arugument. okka argument evuu roo
