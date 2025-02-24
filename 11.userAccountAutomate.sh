@@ -4,7 +4,7 @@ USERNAME=$1
 
 EXISTING_USER=$(cat /etc/passwd | grep -i -w ${USERNAME} | cut -d ':' -f1)
 
-if [ "${USERNAME}" = "${EXISTING_USER}"]; then
+if [ "${USERNAME}" = "${EXISTING_USER}" ]; then
     echo "${EXISTING_USER} already exist try a differnet username"
 else
     echo "lets create the user${USERNAME}"
