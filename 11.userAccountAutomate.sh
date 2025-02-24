@@ -1,6 +1,6 @@
 #!/bin/bash
 #,read -p "please enter username" username
-#set -x
+set -x
 SLACK_WEB="https://hooks.slack.com/services/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"
 if [ $# -gt 0 ]; then
     USERNAME=$1
