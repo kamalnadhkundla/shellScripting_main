@@ -11,6 +11,7 @@ if [ $# -gt 0 ]; then
         echo "${EXISTING_USER} already exist try a differnet username"
     else
         echo "lets create the user${USERNAME}"
+        useradd -m ${USERNAME} -s /bin/bash
     fi
 else
     echo you have given $# arugument. okka argument evuu roo
