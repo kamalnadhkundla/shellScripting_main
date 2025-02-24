@@ -12,6 +12,8 @@ if [ $# -gt 0 ]; then
     else
         echo "lets create the user${USERNAME}"
         useradd -m ${USERNAME} -s /bin/bash
+        SPEC=$(echo '!@#$%^&*()_' | fold -1 | shuf | head -1);
+        PASSWORD="India@${RANDOM}${SPEC}
     fi
 else
     echo you have given $# arugument. okka argument evuu roo
