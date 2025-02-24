@@ -1,7 +1,7 @@
 #!/bin/bash
 #,read -p "please enter username" username
-set -x
-
+#set -x
+SLACK_WEB='https://hooks.slack.com/services/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'
 if [ $# -gt 0 ]; then
     USERNAME=$1
 
@@ -16,7 +16,10 @@ if [ $# -gt 0 ]; then
         PASSWORD="India@${RANDOM}${SPEC}"
         echo "${USERNAME}:${PASSWORD}" | sudo chpasswd
         passwd -e ${USERNAME}
-        echo " the username is ${USERNAME} and password is ${PASSWORD}."
+       # echo " the username is ${USERNAME} and password is ${PASSWORD}."
+       curl -X POST ${SLACK_WEB} -sL -H 'content-type: application/json' --data "{"text" : \"Username is: ${USERNAME}\"}" >>/dev/null
+       curl -X POST ${SLACK_WEB} -sL -H 'content-type: application/json' --data "{"text" : \"Temporary Password is: ${PASSWORD} Reset this password immediately.\"}" >>/dev/null
+       
     fi
 else
     echo you have given $# arugument. okka argument evuu roo
