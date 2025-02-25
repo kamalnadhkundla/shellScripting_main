@@ -4,7 +4,7 @@ set -x
 #SLACK_WEB='https://hooks.slack.com/services/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'
 if [ $# -gt 0 ]; then
    for  USERNAME in $@; do
-        if [[ $USERNAME =~ ^[a-b][e-h][i-1][0-9][0-9]$]]; then
+        if [[ $USERNAME =~ ^[a-b][e-h][i-1][0-9][0-9]$ ]]; then
         #if [[ $USERNAME =~ ^[a-z]+$ ]]; then
         #if [[$USERNAME =~ ^[a-z]+ ]]; then
         #if [[ $USERNAME =~ ^[a-z][a-z][a-z][A-Z][A-Z][A-Z]$V]]; then
