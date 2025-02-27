@@ -2,7 +2,7 @@
 #!bin/bash
 
 DATA=$(cat applist.log)
-for IPADDRESS IN $DATA; do
+for IPADDRESS in $DATA; do
     if [[ $IPADDRESS =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1.3}\.[0-9]{1,3}$ ]]; then
         echo "$IPADDRESS is Valid"
     else
