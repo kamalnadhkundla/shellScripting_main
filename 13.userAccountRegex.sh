@@ -5,9 +5,9 @@ set -x
 if [ $# -gt 0 ]; then
    for  USERNAME in $@; do
         if [[ $USERNAME =~ ^[a-b][e-h][i-z][0-9][0-9][0-9]$ ]]; then
-        #if [[ $USERNAME =~ ^[a-z]+$ ]]; then
-        #if [[$USERNAME =~ ^[a-z]+ ]]; then
-        #if [[ $USERNAME =~ ^[a-z][a-z][a-z][A-Z][A-Z][A-Z]$V]]; then
+        #if [[ $USERNAME =~ ^[a-z]+$ ]]; then " only lowecase alphabets"
+        #if [[$USERNAME =~ ^[a-z]+ ]]; then " alphabets and numbers"
+        #if [[ $USERNAME =~ ^[a-z][a-z][a-z][A-Z][A-Z][A-Z]$V]]; then "lowe and upper case alphabets "
         #if [[ $USERNAME =~ ^[a-zA-Z] ]]; then
         #if [[ $USERNAME =~ ^[a-zA-Z]+$]]; then
 

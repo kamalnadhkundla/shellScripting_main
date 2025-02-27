@@ -1,0 +1,9 @@
+http://example.com
+https://secure-site.org
+http://sub.domain.net/path/to/page
+https://mywebsite.com?query=123
+http://blog.example.co.uk/article
+ftp://ftp.example.com/public
+sftp://secure.example.com/files
+file:///home/user/document.txt
+mailto:user@example.com
