@@ -6,6 +6,7 @@ for URL in $DATA; do
         domain=${BASH_REMATCH[1]}
         echo "$URL is a valid url and domian name is $domain."
     else
-        echo "$url "Invalid URL as its not staring with https and http.
+        echo "$URL "Invalid URL as its not staring with https and http.
     fi
 done
+
