@@ -1,4 +1,4 @@
-
+#finding ip address is valid or not using regex expression
 #!bin/bash
 
 DATA=$(cat applist.log)
