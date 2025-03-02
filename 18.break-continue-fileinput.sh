@@ -4,7 +4,7 @@ for WEBSITE in $(cat websites); do
     if [ $? -eq 0 ]; then
         echo "then domain $WEBSITE ia up and running"
     else
-        echo "then domain $WEBSITE ia up and running"
+        echo "then domain $WEBSITE is down and invlaid"
         #break
         continue
     fi
