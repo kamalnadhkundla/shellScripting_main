@@ -5,6 +5,7 @@ for WEBSITE in $(cat websites); do
         echo "then domain $WEBSITE ia up and running"
     else
         echo "then domain $WEBSITE ia up and running"
-        break
+        #break
+        continue
     fi
 done
